@@ -93,7 +93,7 @@ export default function Home() {
 										Prism encrypts all outgoing messages before they are even
 										sent to the server. All encryption is done in our client and
 										only in our client. This means your messages will be secure
-										even if your network isn't.
+										even if your network is not.
 									</p>
 								</div>
 								<div className="bg-neutral-900/[0.6] w-full py-5 px-10 rounded-2xl">
@@ -102,7 +102,7 @@ export default function Home() {
 										We have built our system in a way that allows anyone to run
 										their own Prism server while maintaining security of all
 										messages. This means there is no single point of failure in
-										the network. If you don't trust us, run your own server.
+										the network. If you do not trust us, run your own server.
 									</p>
 								</div>
 								<div className="bg-neutral-900/[0.6] w-full py-5 px-10 rounded-2xl">
