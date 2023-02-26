@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Poppins */
+/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Lato */
+/* font-family: 'Lato', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.textureBackground {
+  /* background-color: #d5d5d5; */
+  opacity: 1;
+  background-image:  radial-gradient(#000000 1px, transparent 1px), radial-gradient(#000000 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: 0 0,15px 15px;
+}
+
+.floating { 
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  /* margin-left: 30px; */
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
