@@ -9,10 +9,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
+// Components
+import NavbarComponent from '@/components/NavbarComponent';
+import ButtonComponent from '@/components/ButtonComponent';
+
 // Images
 import PrismChatWebApp from '../../public/PrismChatWebApp.png';
 import PrismLogo from '../../public/logo/logo.svg';
 
+// Styles
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
@@ -34,32 +39,15 @@ export default function Home() {
 					<div className="min-h-screen bg-black/[.7] flex flex-col justify-between">
 						{/* Header */}
 						<header className="bg-neutral-900">
-							<div className="container mx-auto flex justify-evenly items-center p-3">
-								<div className="flex justify-start w-full">
-									<Image src={PrismLogo} alt="Prism Chat Logo." width={200} />
-								</div>
-
-								<div className="flex justify-center w-full"></div>
-
-								<div className="flex justify-end w-full">
-									<button
-										className="text-white font-bold text-l px-5 py-2 bg-gradient-to-r from-custom-pink to-custom-blue hover:from-custom-pink-dark hover:to-custom-blue-dark active:from-custom-pink-darker active:to-custom-blue-darker text-white hover:text-gray-200 active:text-gray-300 rounded-full"
-										onClick={() => {
-											window.open('https://app-demo.prism.chat/', '_blank');
-										}}
-									>
-										Chat App
-									</button>
-								</div>
-							</div>
+							<NavbarComponent />
 						</header>
 
 						{/* Main */}
-						<main className="h-full">
+						<main className="container mx-auto p-10 grid grid-cols-1 gap-y-24">
 							{/* Hero */}
-							<div className="container mx-auto text-white bg-neutral-900 m-16 p-14 rounded-xl flex justify-evenly space-x-28">
-								<div className="basis-1/2">
-									<div className="pt-14 text-5xl font-bold leading-normal">
+							<div className="text-white bg-neutral-900 p-10 rounded-xl grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-4">
+								<div>
+									<div className="text-4xl md:text-6xl font-bold leading-normal">
 										Communicate{' '}
 										<span className="inline bg-gradient-to-t from-custom-blue-dark to-custom-blue-light text-transparent bg-clip-text">
 											Freely
@@ -71,20 +59,20 @@ export default function Home() {
 										with Prism!
 									</div>
 									<div>
-										<p className="text-gray-500 text-xl">
+										<p className="text-gray-500 text-l md:text-xl">
 											Decentralized, Anonymous, e2e Encryption.
 										</p>
 									</div>
-									<button
-										className="text-white font-bold text-l mt-14 px-10 py-2 bg-gradient-to-r from-custom-pink to-custom-blue hover:from-custom-pink-dark hover:to-custom-blue-dark active:from-custom-pink-darker active:to-custom-blue-darker text-white hover:text-gray-200 active:text-gray-300 rounded-full"
-										onClick={() => {
-											window.open('https://app-demo.prism.chat/', '_blank');
-										}}
-									>
-										Chat Now!
-									</button>
+									<div className="py-10">
+										<ButtonComponent
+											text="Chat Now!"
+											onClick={() => {
+												window.open('https://app-demo.prism.chat/', '_blank');
+											}}
+										/>
+									</div>
 								</div>
-								<div className="basis-1/2 flex items-center">
+								<div className="flex items-center">
 									<div className="h-min">
 										<Image
 											src={PrismChatWebApp}
@@ -95,13 +83,13 @@ export default function Home() {
 							</div>
 
 							{/* Features */}
-							<div className="container mx-auto text-white m-16 flex sm:flex-row justify-evenly space-x-10 flex-col">
+							<div className="text-white grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
 								<div className="bg-neutral-900/[0.6] w-full py-5 px-10 rounded-2xl">
 									<div className="pb-2 font-bold text-xl flex space-x-2">
 										<FontAwesomeIcon icon={faKey} className="w-7 m-0" />
 										<h3>Encryption e2e</h3>
 									</div>
-									<p className="text-gray-400">
+									<p className="text-gray-400 text-l md:text-xl">
 										Prism encrypts all outgoing messages before they are even
 										sent to the server. All encryption is done in our client and
 										only in our client. This means your messages will be secure
@@ -113,7 +101,7 @@ export default function Home() {
 										<FontAwesomeIcon icon={faDiagramProject} className="w-7" />
 										<h3>Decentralized</h3>
 									</div>
-									<p className="text-gray-400">
+									<p className="text-gray-400 text-l md:text-xl">
 										We have built our system in a way that allows anyone to run
 										their own Prism server while maintaining security of all
 										messages. This means there is no single point of failure in
@@ -125,7 +113,7 @@ export default function Home() {
 										<FontAwesomeIcon icon={faUserSecret} className="w-7" />
 										<h3>Anonymous</h3>
 									</div>
-									<p className="text-gray-400">
+									<p className="text-gray-400 text-l md:text-xl">
 										We understand that it is important not only to keep your
 										messages safe, but your identity also. Prism does not
 										require any personal information, identifying you only by a
@@ -137,7 +125,7 @@ export default function Home() {
 										<FontAwesomeIcon icon={faGithub} className="w-7" />
 										<h3>Open Source</h3>
 									</div>
-									<p className="text-gray-400">
+									<p className="text-gray-400 text-l md:text-xl">
 										All of our source code is hosted publicly on GitHub to
 										promote open discussion, transparency and innovation. We
 										hope others can take advantage of Prism, and find new ways
