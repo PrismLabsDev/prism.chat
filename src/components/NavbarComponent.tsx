@@ -13,7 +13,7 @@ export default function NavbarComponent() {
 
 	return (
 		<>
-			<nav className="grid grid-cols-3 gap-4 p-4 text-white">
+			<nav className="container mx-auto grid grid-cols-3 gap-4 p-4 text-white">
 				<div className="flex justify-start md:w-48">
 					<Image src={PrismLogo} alt="Prism Chat Logo." width={200} />
 				</div>

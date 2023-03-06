@@ -30,7 +30,7 @@ export default function Home() {
 					content="Prism Chat: E2E, anonymous and decentralized communication."
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/logo/favicon.svg" />
+				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
 			{/* background */}
