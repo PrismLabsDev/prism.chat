@@ -54,7 +54,7 @@ export default function NavbarComponent() {
 							<ButtonComponent
 								text="Chat Now!"
 								onClick={() => {
-									window.open('https://app-demo.prism.chat/', '_blank');
+									window.open('https://spa-demo.prism.chat/', '_blank');
 								}}
 							/>
 							<button>
@@ -62,7 +62,7 @@ export default function NavbarComponent() {
 									icon={faGithub}
 									className="w-10"
 									onClick={() => {
-										window.open('https://github.com/PrismChatLabs', '_blank');
+										window.open('https://github.com/PrismLabsDev', '_blank');
 									}}
 								/>
 							</button>
@@ -83,7 +83,7 @@ export default function NavbarComponent() {
 							<ButtonComponent
 								text="Chat Now!"
 								onClick={() => {
-									window.open('https://app-demo.prism.chat/', '_blank');
+									window.open('https://spa-demo.prism.chat/', '_blank');
 									setMobileOpen(false);
 								}}
 							/>
@@ -92,7 +92,7 @@ export default function NavbarComponent() {
 									icon={faGithub}
 									className="w-10"
 									onClick={() => {
-										window.open('https://github.com/PrismChatLabs', '_blank');
+										window.open('https://github.com/PrismLabsDev', '_blank');
 									}}
 								/>
 							</button>
