@@ -54,7 +54,7 @@ export default function NavbarComponent() {
 							<ButtonComponent
 								text="Chat Now!"
 								onClick={() => {
-									window.open('https://app-demo.prism.chat/', '_blank');
+									window.open('https://app.prism.chat/', '_blank');
 								}}
 							/>
 							<button>
@@ -83,7 +83,7 @@ export default function NavbarComponent() {
 							<ButtonComponent
 								text="Chat Now!"
 								onClick={() => {
-									window.open('https://app-demo.prism.chat/', '_blank');
+									window.open('https://app.prism.chat/', '_blank');
 									setMobileOpen(false);
 								}}
 							/>
